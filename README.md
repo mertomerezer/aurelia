@@ -57,7 +57,6 @@ Bir kafenin menü, masa ve sipariş işlemlerini tek bir masaüstü uygulaması 
 |                                |                    |                           |                      |                                   |
 |                                |                    |                           |                      |                                   |
 
-Düğüm kullanmayan veri yapıları için bu tabloya düğüm gerekmediğini belirtin.
 
 ## Dosyadan Yükleme ve Kaydetme
 
@@ -81,13 +80,3 @@ Cafe Management System/
 │       └── controllers/ # Ekran etkileşimleri
 └── data/                # Uygulamanın veri dosyaları
 ```
-
-## İlerleme
-
-- [X] Kapsam ve roller netleştirildi
-- [ ] Veri yapıları ve kullanım gerekçeleri belirlendi
-- [ ] Temel sınıf/düğüm taslağı hazırlandı
-- [ ] Her üyenin görevi ve ilk katkısı depoda görünür
-- [ ] Dosyadan yükleme ve toplu kaydetme akışı tamamlandı
-- [ ] Temel işlevler ve arayüz tamamlandı
-- [ ] Uygulama teslim öncesi çalıştırılarak kontrol edildi
