@@ -76,7 +76,7 @@ public void setCategory(){
 
             String status=isAvailable ? "Stokta":"Stok yok";
 
-            String result= id + " - " + name + "(" + category +") : " + price + " TL | Status: " + status;
+            String result= id + " - " + name + "(" + category +") : " + price + " TL | Durum: " + status;
 
             return result;
 
