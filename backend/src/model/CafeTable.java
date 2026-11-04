@@ -32,7 +32,6 @@ public class CafeTable {
         }else{
             status = "Boş";
         }
-
         return "CafeTable{Masa Numarası = "+tableNumber +", Durum " + status+"}";
 
 
