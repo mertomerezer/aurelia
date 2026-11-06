@@ -40,6 +40,48 @@ public class ProductLinkedList {
         }
     }
 
+    public void removeById(int targetId) {
+        if (head == null) {
+            System.out.println("Liste boş, silinecek ürün yok.");
+            return;
+        }
+
+
+        if (head.getProduct().getId() == targetId) {
+            head = head.getNext();
+
+
+            if (head == null) {
+                tail = null;
+            }
+
+            System.out.println("Ürün silindi.");
+            return;
+        }
+
+        ProductNode temp = head;
+
+
+        while (temp.getNext() != null) {
+            if (temp.getNext().getProduct().getId() == targetId) {
+                ProductNode deletedNode = temp.getNext();
+
+                temp.setNext(deletedNode.getNext());
+
+
+                if (deletedNode == tail) {
+                    tail = temp;
+                }
+
+                System.out.println("Ürün silindi.");
+                return;
+            }
+
+            temp = temp.getNext();
+        }
+
+        System.out.println("Ürün bulunamadı.");
+    }
 
     public Product searchByName(String targetName) {
         if (targetName == null) {
@@ -60,7 +102,7 @@ public class ProductLinkedList {
         return null;
     }
 
-    // Seçilen kategorideki ürünlerden yeni bir liste oluşturur.
+
     public ProductLinkedList filterByCategory(ProductCategory targetCategory) {
         ProductLinkedList resultList = new ProductLinkedList();
 
@@ -94,7 +136,7 @@ public class ProductLinkedList {
             ProductNode temp = head;
 
             while (temp.getNext() != null) {
-                if (temp.getProduct().getPrice() > temp.getNext().getProduct().getPrice()) {
+                if (temp.getProduct().getName().compareToIgnoreCase(temp.getNext().getProduct().getName()) > 0) {
 
                     Product tempProduct = temp.getProduct();
                     temp.setProduct(temp.getNext().getProduct());
