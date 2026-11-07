@@ -1,13 +1,9 @@
-/**
- * Uygulamada kullanılacak kullanıcı rollerini tanımlar.
- */
-public enum Role {
-    /** Yönetici rolü. */
-    ADMIN,
 
-    /** Garson rolü. */
+public enum Role {
+    
+    ADMIN,
+    
     WAITER,
 
-    /** Mutfak veya barista rolü. */
     KITCHEN_BARISTA
 }
