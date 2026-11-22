@@ -50,6 +50,36 @@ public class OrderQueue {
     public boolean isEmpty() {
         return front == null;
     }
+
+    public boolean removeOrderById(int orderId) {
+        OrderQueueNode previous = null;
+        OrderQueueNode current = front;
+
+        while (current != null && current.getOrder().getOrderId() != orderId) {
+            previous = current;
+            current = current.getNext();
+        }
+
+        if (current == null) {
+            return false;
+        }
+
+        if (previous == null) {
+            front = current.getNext();
+        }else {
+            previous.setNext(current.getNext());
+        }
+
+        if (current == rear) {
+            rear = previous;
+        }
+
+        if (front == null) {
+            rear = null;
+        }
+
+        return true;
+    }
 }
 
 
