@@ -19,7 +19,6 @@ public class TableService {
         return tableList.findByTableNumber(tableNumber);
     }
 
-
     public boolean removeTable(int tableNumber) {
         return tableList.removeTable(tableNumber);
     }
@@ -28,5 +27,15 @@ public class TableService {
         return tableList.setTableOccupied(tableNumber,occupied);
     }
 
+
+    public int getTableCount(){
+        return tableList.getTableCount();
+    }
+
+
+    public CafeTable getTableAt(int index){
+        return tableList.getTableAt(index);
+
+    }
 
 }
