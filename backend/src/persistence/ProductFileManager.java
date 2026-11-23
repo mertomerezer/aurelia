@@ -26,6 +26,7 @@ public class ProductFileManager {
 
             while ((line = reader.readLine()) != null) {
 
+
                 if (line.trim().isEmpty()) {
                     continue;
                 }
@@ -41,7 +42,7 @@ public class ProductFileManager {
                 boolean isAvailable = Boolean.parseBoolean(parts[4]);
 
                 Product product = new Product(id, name, category, price, isAvailable);
-                productList.add(product);
+                productList.addProduct(product);
             }
 
 
