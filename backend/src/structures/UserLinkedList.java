@@ -1,7 +1,5 @@
 package structures;
-
 import model.User;
-
 public class UserLinkedList {
     private UserNode head;
 
@@ -43,15 +41,12 @@ public class UserLinkedList {
 
         while (current != null) {
             User user = current.getUser();
-
             if (user.getUsername() != null
                     && user.getUsername().equals(username)) {
                 return user;
             }
-
             current = current.getNext();
         }
-
         return null;
     }
 }
