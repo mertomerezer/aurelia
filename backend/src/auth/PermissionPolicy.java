@@ -4,7 +4,7 @@ import model.Operation;
 import model.Role;
 import model.User;
 
-public final class PermissionPolicy {
+public final class PermissionPolicy{
 
     private PermissionPolicy() {
     }
