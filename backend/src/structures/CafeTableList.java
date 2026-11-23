@@ -109,6 +109,40 @@ public class CafeTableList {
     }
 
 
+    public int getTableCount(){
+        int count = 0;
+        TableNode current = head;
+
+        while(current!=null){
+            count++;
+            current = current.getNext();
+
+        }
+        return count;
+
+    }
+
+    public CafeTable getTableAt(int index){
+        if(index<0){
+            return null;
+        }
+        int currentIndex=0;
+        TableNode current = head;
+
+        while(current!=null){
+            if(currentIndex == index){
+                return current.getCafeTable();
+            }
+
+            current = current.getNext();
+            currentIndex++;
+
+        }
+            return null;
+
+    }
+
+
     //Masa listesini özellikle numaraya göre sıralamak lazım mı hocaya sorulacak
     //Bu classta Bağlı Liste(LinkedList)
     //-Ekleme : addTable()
